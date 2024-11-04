@@ -1,0 +1,277 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Clean, readable font for body text */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom, #000, #000 90%, #ff6f61 100%); /* Black with a minor tinge of orange */
+    background-attachment: fixed; /* Ensures the gradient stays fixed */
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic and bold font for headings */
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, rgba(255, 111, 97, 0.8), rgba(0, 0, 0, 0.8)); /* Light gradient background */
+    backdrop-filter: blur(10px); /* Blur effect for glass appearance */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px; /* Adjust the height as needed */
+    vertical-align: middle;
+}
+
+.neon-effect {
+    filter: drop-shadow(0 0 10px #00ffcc); /* Neon effect */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for glass effect */
+    backdrop-filter: blur(5px); /* Blur effect for glass appearance */
+    font-family: 'Roboto', sans-serif; /* Use the same font as the body */
+}
+
+.nav-links a:hover {
+    background-color: #00ffcc; /* Neon accent on hover */
+    color: #000; /* Change text color on hover */
+    box-shadow: 0 0 10px #00ffcc; /* Add shadow for neon effect */
+}
+
+/* Hero Section Styles */
+#hero {
+    background: url('ai-hero-bg.jpg') no-repeat center center/cover; /* AI-generated hero background */
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+    margin-top: 4rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #00ffcc;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button:hover {
+    background-color: #e65c4c;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background to sections for better readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Service Cards Styles */
+.service-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    position: relative;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Neon effect by default */
+    opacity: 0.5;
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+.service-card:hover::before {
+    opacity: 1; /* Full neon effect on hover */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.service-card p {
+    color: #666;
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    background: url('ai-portfolio-bg.jpg') no-repeat center center/cover; /* AI-generated portfolio background */
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+#portfolio p {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #e65c4c;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
