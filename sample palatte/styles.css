@@ -1,0 +1,739 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('Orbitron.eot'); /* IE9 Compat Modes */
+    src: url('Orbitron.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('Orbitron.woff') format('woff'), /* Modern Browsers */
+    url('Orbitron.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('Orbitron.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+    
+  }
+
+/* General Styles */
+body { 
+    font-family: 'Orbitron', sans-serif; /* Clean, readable font for body text */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom, #000, #1d0d47 90%, #cfcfcf 150%); /* Black with a minor tinge of orange */
+    background-attachment: fixed; /* Ensures the gradient stays fixed */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to left, #212020 1%, rgba(29,13,71)); /* Light gradient background */
+    backdrop-filter: blur(20px); /* Blur effect for glass appearance */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(29,13,71, 0.2); /* Add shadow for depth */
+}
+
+nav {
+    font-family: "Share Tech Mono", monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px; /* Adjust the height as needed */
+    vertical-align: middle;
+}
+
+.neon-effect {
+    filter: drop-shadow(0 0 10px #fff); /* Neon effect */
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-family: "Share Tech Mono", monospace;
+
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for glass effect */
+    backdrop-filter: blur(5px); /* Blur effect for glass appearance */
+}
+
+.nav-links a:hover {
+    background-color: #fff; /* Neon accent on hover */
+    color: #000; /* Change text color on hover */
+    box-shadow: 0 0 10px #fff; /* Add shadow for neon effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Hero Section Styles */
+#hero {
+    color: #fff;
+    text-align: center;
+    padding: 15rem 0;
+    margin-top: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ff6f61;
+    z-index: 2;
+
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2; /* Ensure the button appears over the robot head image */
+}
+
+.cta-button:hover {
+    background-color: #e65c4c;
+}
+
+.robo-head-image {
+    position: absolute;
+    top: 1%; /* Shift the image slightly up */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* Adjust the size as needed */
+    height: auto;
+    z-index: 0; /* Ensure it stays behind the text and button */
+    opacity: 0.5; /* Adjust opacity as needed */
+}
+/* Section Styles */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+    color: #fff;}
+/* text-shadow: 0 0 10px #fff;
+}
+
+/* Service Cards Styles */
+.service-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    position: relative;
+}
+
+.service-card {
+    /*background-color: rgba(0, 255, 204, 0.1); /* Light-emitting effect in the bg */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(29,13,71, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(208, 210, 210, 0.5); /* Neon effect by default */
+    opacity: 0.5;
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+.service-card:hover::before {
+    opacity: 0; /* Neon effect turns off on hover */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(29,13,71, 0.2);
+}
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    /*text-shadow: 0 0 10px #fff;*/
+    position: relative;
+    z-index: 2;
+}
+
+.service-card p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    /*text-shadow: 0 0 10px #fff;*/
+    position: relative;
+    z-index: 2;
+
+}
+
+.service-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the whole tile */
+    opacity: 0.4; /* Adjust opacity to make text readable */
+    z-index: 1;
+}
+
+/* Contact Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: #fff;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #e65c4c;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {/* General Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f4f4f4;
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
+    }
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+    }
+    
+    .nav-links a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+    
+    /* Hero Section Styles */
+    #hero {
+        background: url('hero-bg.jpg') no-repeat center center/cover;
+        color: #fff;
+        text-align: center;
+        padding: 10rem 0;
+        margin-top: 4rem;
+    }
+    
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 10px rgba(29,13,71, 0.5);
+        color: #fff;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 10px rgba(29,13,71, 0.5);
+    }
+    
+    .cta-button {
+        background-color: #352659;
+        color: #fff;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s;
+        box-shadow: 0 0 10px rgba(29,13,71, 0.5);
+    }
+    
+    .cta-button:hover {
+        background-color: #1100ff;
+    }
+    
+    /* Section Styles */
+    section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: #333;
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
+    }
+    
+/* Service Cards Styles */
+.service-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    position: relative;
+}
+
+.service-card {
+    background-color: #222; /* Lighter black background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(29,13,71, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Neon effect by default */
+    opacity: 0.5;
+    z-index: -1;
+    transition: opacity 0.3s;
+}
+
+.service-card:hover::before {
+    opacity: 1; /* Full neon effect on hover */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(29,13,71, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.service-card p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.service-icon {
+    max-width: 80px; /* Adjust the size as needed */
+    margin-top: auto; /* Push the image to the bottom */
+}
+/**/
+.service-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    position: relative;
+}
+
+.service-card {
+    background-color: #222; /* Lighter black background */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    /*box-shadow: 0 0 20px rgba(110, 137, 164, 0.5); /* Neon effect by default 
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 3s;
+}*/
+#typewriter {
+    border-right: .15em solid #ff6f61; /* Cursor effect */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff6f61; }
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(29,13,71, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.service-card p {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #fff; /* Increase text contrast */
+    position: relative;
+    z-index: 2;
+}
+
+.service-icon {
+    max-width: 80px; /* Adjust the size as needed */
+    margin-top: auto; /* Push the image to the bottom */
+}
+    
+    /* Contact Form Styles */
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    #contact-form input,
+    #contact-form textarea {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    
+    #contact-form button {
+        background-color: #fff;
+        color: #fff;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #contact-form button:hover {
+        background-color: #e65c4c;
+    }
+    
+    /* Footer Styles */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    /* Neon Accents */
+    .neon-accent {
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .nav-links {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    
+        .service-cards {
+            flex-direction: column;
+        }
+    
+        .hero-content h1 {
+            font-size: 2.5rem;
+        }
+    
+        .hero-content p {
+            font-size: 1rem;
+        }
+    
+        section h2 {
+            font-size: 2rem;
+        }
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    background: url('ai-portfolio-bg.jpg') no-repeat center center/cover; /* AI-generated portfolio background */
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(29,13,71, 0.1);
+    text-align: center;
+    color: #fff;
+    /*text-shadow: 0 0 10px rgba(29,13,71, 0.5);*/
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    
+}
+
+.under-construction {
+    background-color: rgba(29,13,71, 0.7); /* Semi-transparent black background */
+    padding: 2rem;
+    font-family: "Share Tech Mono", monospace;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(145, 143, 143, 0.5)
+    ; /* Neon effect */
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.under-construction h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.under-construction p {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    /*text-shadow: 0 0 10px #fff;*/
+}
+
+.social-handles {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.social-link:hover {
+    color: #fff;
+}
+
+footer {
+    background: linear-gradient(to top, rgba(210, 210, 210, 0.3), rgba(29,13,71, 0.8)); /* Gradient background */
+    background-color: #1d0d47;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
